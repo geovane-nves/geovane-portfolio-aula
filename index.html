@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geovane Neves | Portfólio</title>
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Fontes do Google: fonte de apoio e fonte da capa -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&family=Quattrocento:wght@400;700&family=Playfair+Display:ital@1&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- tema claro/escuro conforme o navegador do visitante (sem defer, para não piscar) -->
+  <meta name="color-scheme" content="light dark">
+  <script src="js/theme.js"></script>
+</head>
+
+<body>
+
+  <!-- ================= MENU ================= -->
+  <header class="navbar">
+    <nav class="navbar__inner">
+      <ul class="navbar__links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a href="#home">Geovane Neves</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= CAPA ================= -->
+    <section class="hero" id="home">
+      <!-- mão em ASCII (js/animations.js troca alguns caracteres de tempos em tempos) -->
+      <pre class="hero__mao" id="mao" aria-hidden="true">                    :=+-----=+=--:
+                :--::-::-----=+=+-=-=-=..
+         ::..--=-=--...:.:--===----=--=-=+==--=:..:.
+    .:=-::::::=--=+--=====-==:::=====:..::==-=+*+*+++:
+ :-=:::-:=---==+%+**#@***#=-::...:==-:...:.::::::===**=
+==---=-=-=%=++@**#***@******=:-...:---:...:---=...--=*++=::
+-=----=+=+%++*@#**#**@+****#%-::....--==:==++--=::.--==+@+*#+=                                                                 ::::..:::.:-::-
+===-=--=+@++*#@***###@*#**###-===-.:--====+**#*--*---=======+=%%-                                                    .....-.-:....-.----------
+-=--=-=@+*#***@#***#%@****=- ====-:::....:@*#**#@@#++##+=-:::--++-                                       ..::..::--::-:....:.:...::::=:-::::::
+---=*@++**##*#@**#**#@+:      :--=*=+-:...=+**##=@**###@@*###*==##=                                .::..:.....:.::=:::::====*-==-=--=-==-==:=:
+-=%+=+#@******@***#**:          :=++++::::=+***: @*#*#%#@***%#%+-=+%:           .::::=:=:==-:::::::::::::::::::::-==::=+++++++++++++=-==::::::
+++*****@#*****@**#+:               .-==--==--=*##@****#%@***##@:+=*=%.    :--:-:---=+------:::::=--==----:------=-++#%#**+++++%+++*--==-------
+%*****#@****#*@*+=                       .----==++#*#= :@*#*#%%+.*=+#+   ===-++###%@###%#%+-:.:.-+#%%+-:.:::--::-++@@##%%%++++++++----=--=-:--
+*******@******#:                            .-+--=*+#=. -***#%#@: -++#+   ::----....  ..--++--++--##=...=---=:--++####%%#@%%%#%######++++-+-+=
+*#*****@***+=.                                .==@**#*-  =*#*#%#=    .                      :+#%#@+:.::=-#%+=--+##%##%##%#%%%%%%##%#++*++++=++
+******#@+-.                                    :#@*=*+@  .**##%@+                           :#%-:.::=+@#%%#%@%%%@%%%##@%%%%##%@%@#%@##@##+%%#+
+#***++.                                        .%@+*+==   =*#%@@=.                       ..-=::-=-+%#%%%@%#@@###%#@%##%%@=:..=+@%###@%@#%#%##@
+++:                                             :.         -+.:*+.                     =-===-=++#@%%+==+#@##@#%%%%%@%@%:          :.:=++#%###@
+                                                                                       -=--=-=+@#+*#%*--=+@*-+@##@%#.
+                                                                                        .-@@@%@--+%%%+%%%++@@+++#+.
+                                                                                         :=+#%=+%%@-.==+@#=+-=:
+                                                                                        .=+%@==+@+..+%%%+.
+                                                                                         =+%#**@+: .+@#%-
+                                                                                        .:=%#-+@-  .-==+:
+                                                                                         :-#@-+@:   .-=+.
+                                                                                         :++.:-.      .</pre>
+
+      <h1 class="hero__title">
+        Transformando <em class="destaque-capa">ideias</em><br>
+        em <em class="destaque-capa">aplicações</em>
+      </h1>
+    </section>
+
+    <!-- ================= SOBRE MIM ================= -->
+    <section class="sobre" id="sobre">
+      <div class="sobre__text">
+        <h2 class="titulo titulo--sobre">Sobre mim</h2>
+        <p>
+          Minha trajetória na programação começou em 2021, movida pela
+          <strong class="hl">curiosidade</strong> de entender como a tecnologia funciona e
+          pela vontade de <strong class="hl">criar minhas próprias soluções.</strong>
+        </p>
+        <p>
+          Atualmente, curso <strong class="hl">Análise e Desenvolvimento de Sistemas</strong>
+          e venho aprofundando meus conhecimentos por meio de
+          <strong class="hl">estudos, experimentações e projetos práticos.</strong>
+          Ao longo dessa jornada, tenho explorado diferentes linguagens, ferramentas e
+          abordagens de desenvolvimento, buscando compreender não apenas como escrever
+          código, mas também como estruturar aplicações, organizar informações e
+          <strong class="hl">resolver</strong> problemas de maneira <strong class="hl">eficiente</strong>.
+        </p>
+      </div>
+      <img class="sobre__foto sobre__foto--claro" src="assets/images/Profile_claro.png" alt="Foto de Geovane Neves">
+      <img class="sobre__foto sobre__foto--escuro" src="assets/images/Profile.png" alt="Foto de Geovane Neves">
+    </section>
+
+    <!-- ================= HABILIDADES ================= -->
+    <section class="habilidades" id="habilidades">
+      <h2 class="titulo">Habilidades</h2>
+
+      <ul class="skills">
+        <li><img src="assets/images/icons/Java.svg" alt="">Java</li>
+        <li><img src="assets/images/icons/JavaScript.svg" alt="">JavaScript</li>
+        <li><img src="assets/images/icons/TypeScript.svg" alt="">TypeScript</li>
+        <li><img src="assets/images/icons/Python.svg" alt="">Python</li>
+        <li><img src="assets/images/icons/C.svg" alt="">C</li>
+        <li><img src="assets/images/icons/Html.svg" alt="">Html</li>
+        <li><img src="assets/images/icons/Css.svg" alt="">CSS</li>
+      </ul>
+      <ul class="skills">
+        <li><img src="assets/images/icons/Spring.svg" alt="">Spring boot</li>
+        <li><img src="assets/images/icons/Django.svg" alt="">Django</li>
+        <li><img src="assets/images/icons/Git.svg" alt="">git</li>
+        <li><img src="assets/images/icons/GitHub.svg" alt="">GitHub</li>
+        <li><img src="assets/images/icons/Docker.svg" alt="">Docker</li>
+        <li><img src="assets/images/icons/Figma.svg" alt="">Figma</li>
+        <li><img src="assets/images/icons/PostgreSQL.svg" alt="">PostgreSQL</li>
+      </ul>
+    </section>
+
+    <!-- ================= EXPERIÊNCIAS ================= -->
+    <section class="experiencias" id="experiencias">
+      <h2 class="titulo">Experiências</h2>
+
+      <!-- persona ao lado das experiências (posição definida em components.css) -->
+      <img class="experiencias__persona" src="assets/images/Persona.png" alt="" aria-hidden="true">
+
+      <article class="experiencia">
+        <h3><span>Projeto Educa Drones</span> <b>·</b> 2026 - ATUALMENTE</h3>
+        <p>Participação no desenvolvimento e aprimoramento da plataforma web do projeto Educa Drones, contribuindo para sua presença digital e organização de conteúdos.</p>
+        <p><strong>Tecnologias trabalhadas: HTML, CSS, Python e MySQL.</strong></p>
+      </article>
+
+      <article class="experiencia">
+        <h3><span>Projetos acadêmicos — ADS</span> <b>·</b> 2026 - ATUALMENTE</h3>
+        <p>Desenvolvimento de projetos acadêmicos envolvendo programação, modelagem de dados e construção de aplicações, colocando em prática conhecimentos adquiridos no curso.</p>
+        <p><strong>Tecnologias trabalhadas: HTML, CSS, C e MySQL.</strong></p>
+      </article>
+
+      <article class="experiencia">
+        <h3><span>RevendeAi</span> <b>·</b> 2025 - 2026</h3>
+        <p>Participação no desenvolvimento de uma aplicação web, contribuindo para a implementação de funcionalidades, construção de interfaces e utilização de tecnologias de desenvolvimento.</p>
+        <p><strong>Tecnologias trabalhadas: TypeScript, React, Java, Spring e PostgreSQL.</strong></p>
+      </article>
+
+      <article class="experiencia">
+        <h3><span>Projeto B-Bordados</span> <b>·</b> 2025</h3>
+        <p>Desenvolvimento de um projeto web voltado à B-Bordados, aplicando conhecimentos de programação e criação de interfaces para atender às necessidades do projeto.</p>
+        <p><strong>Tecnologias trabalhadas: HTML, CSS e JavaScript.</strong></p>
+      </article>
+    </section>
+
+    <!-- ================= PROJETOS =================
+         Cada card é um link para o modal com o mesmo id -->
+    <section class="projetos" id="projetos">
+      <h2 class="titulo">Projetos <span class="seta">›</span></h2>
+
+      <div class="projetos__lista">
+        <a class="card-p" href="#modal-api">
+          <img src="assets/images/Banner.png" alt="">
+          <h3>API carrinho<br>de e-commerce</h3>
+        </a>
+        <a class="card-p" href="#modal-rifas">
+          <img src="assets/images/Banner.png" alt="">
+          <h3>Sistema web - compra<br>e venda de rifas</h3>
+        </a>
+        <a class="card-p" href="#modal-biblioteca">
+          <img src="assets/images/Banner.png" alt="">
+          <h3>Sistema voltado ao gerenciamento<br>de bibliotecas</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= BLOG ================= -->
+    <section class="blog" id="blog">
+      <div class="blog__topo">
+        <h2 class="titulo">Blog</h2>
+        <hr>
+      </div>
+
+      <div class="blog__lista">
+        <a class="card-b" href="#post-1">
+          <h3>Criando um portfólio com <br>identidade visual</h3>
+          <p>Como fugir de portifólio convencional (muitas vezes feito por IA) para uma experiência visual que representa a personalidade de quem desenvolve. "Criar um portfólio não deveria ser apenas reunir projetos e adicionar links" ...</p>
+          <span>Ler postagem ›</span>
+        </a>
+        <a class="card-b" href="#post-2">
+          <h3>Participei do desenvolvimento <br>web do Educa Drones</h3>
+          <p>Uma reflexão sobre desenvolver para um projeto real e entender como decisões técnicas influenciam a organização, a manutenção e a evolução de um site ...</p>
+          <span>Ler postagem ›</span>
+        </a>
+        <a class="card-b card-b--laranja" href="#post-3">
+          <h3>Atrás de uma<br> aplicação web?</h3>
+          <p>Uma aplicação web pode parecer simples para quem a utiliza. Um formulário, uma tela de login ou uma lista de informações são elementos comuns, mas existe uma estrutura responsável por fazer tudo funcionar ...</p>
+          <span>Ler postagem ›</span>
+        </a>
+        <a class="card-b" href="#post-4">
+          <h3>Participação de projeto<br>de extensão IF baiano</h3>
+          <p>Minha participação no projeto de extensão Programando o Futuro, voltado a aproximar a tecnologia de estudantes do ensino médio e ampliar o contato com a programação ...</p>
+          <span>Ler postagem ›</span>
+        </a>
+        <a class="card-b card-b--laranja" href="#post-5">
+          <h3>Programação na <br>faculdade?</h3>
+          <p>Como a faculdade de Análise e Desenvolvimento de Sistemas complementa a prática e ajuda a construir uma visão mais ampla sobre software ...</p>
+          <span>Ler postagem ›</span>
+        </a>
+        <a class="card-b" href="#post-6">
+          <h3>Por que planejar <br>antes de programar?</h3>
+          <p>Quando surge uma ideia para um site, a primeira vontade costuma ser abrir o editor e começar a escrever HTML e CSS. Entretanto, dedicar algum tempo ao planejamento pode evitar retrabalho e tornar o desenvolvimento mais organizado ...</p>
+          <span>Ler postagem ›</span>
+        </a>
+        <a class="card-b" href="#post-7">
+          <h3>APIs REST:<br>troca de informações.</h3>
+          <p>Em muitas aplicações modernas, a interface e o servidor são desenvolvidos separadamente. Para que essas partes trabalhem juntas, é necessário estabelecer uma forma de comunicação. É nesse contexto que as APIs REST se tornam importantes ...</p>
+          <span>Ler postagem ›</span>
+        </a>
+        <a class="card-b" href="#post-8">
+          <h3>O processo também <br>faz parte do resultado</h3>
+          <p>Quando observamos um projeto finalizado, é fácil enxergar apenas o resultado: uma interface pronta, funcionalidades funcionando e uma estrutura aparentemente organizada. O caminho até esse ponto costuma ser bem menos linear ...</p>
+          <span>Ler postagem ›</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="contato" id="contato">
+      <div class="contato__info">
+        <h2 class="contato__titulo">
+          Bora construir algo<br>
+          <em class="destaque-capa">incrível</em> juntos?
+        </h2>
+        <p class="contato__texto">
+          <span class="laranja">Disponível</span> para projetos full stack, consultoria
+          técnica ou um bate papo virtual. Resposta em até 24h.
+        </p>
+
+        <ul class="redes">
+          <li><a href="https://github.com/geovane-nves" target="_blank"><img src="assets/images/icons/GitHub.svg" alt="">github.com/geovane-nves</a></li>
+          <li><a href="https://linkedin.com/in/geovane-nves" target="_blank"><img src="assets/images/icons/Linkedin.svg" alt="">linkedin.com/in/geovane-nves</a></li>
+          <li><a href="https://instagram.com/geovane.nves" target="_blank"><img src="assets/images/icons/Instagram.svg" alt="">instagram.com/geovane.nves</a></li>
+        </ul>
+      </div>
+
+      <!-- janela do formulário (o envio abre o programa de e-mail, sem JS) -->
+      <div class="janela">
+        <div class="janela__barra">
+          <span class="bolinha vermelha"></span>
+          <span class="bolinha amarela"></span>
+          <span class="bolinha verde"></span>
+        </div>
+
+        <!-- ENVIO: usa mailto (abre o programa de e-mail do visitante).
+             Para usar um serviço externo, troque só o action e remova o enctype:
+             <form class="form" action="https://formspree.io/f/SEU_ID" method="POST">
+             Os campos inválidos são avisados pelo CSS (:user-invalid), sem JavaScript. -->
+        <form class="form" action="mailto:geonevesrodrigues@gmail.com" method="post" enctype="text/plain">
+          <h3>Entre em contato</h3>
+
+          <label>Seu nome
+            <input type="text" name="nome" placeholder="Prof. João Silva" required>
+            <span class="erro">Informe seu nome.</span>
+          </label>
+
+          <div class="form__linha">
+            <label>E-mail
+              <input type="email" name="email" placeholder="exemplo@email.com" required>
+              <span class="erro">Informe um e-mail válido.</span>
+            </label>
+            <label>Telefone / WhatsApp
+              <input type="tel" name="telefone" placeholder="(77) 9 9999-9999" pattern="[0-9\s\(\)\+\-]{8,}">
+              <span class="erro">Use só números, com DDD.</span>
+            </label>
+          </div>
+
+          <label>Conteúdo
+            <textarea name="mensagem" required></textarea>
+            <span class="erro">Escreva sua mensagem.</span>
+          </label>
+
+          <button class="btn btn--grande" type="submit">Enviar Mensagem →</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="footer">
+    <p>&copy; 2026 <a class="laranja" href="mailto:geonevesrodrigues@gmail.com"></a> Todos os direitos reservados</p>
+    <p>Geovane Nves</p>
+  </footer>
+
+
+  <!-- =====================================================================
+       MODAIS (sem JavaScript)
+       ===================================================================== -->
+
+  <!-- ---------- modal: projeto API Carrinho ---------- -->
+  <div class="modal" id="modal-api">
+    <a class="modal__fundo" href="#projetos"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#projetos">×</a>
+      <header class="modal__topo">
+        <svg class="modal__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 11.2a1.6 1.6 0 0 0 1.6 1.3h8.6a1.6 1.6 0 0 0 1.6-1.2L21 7H6"/></svg>
+        <div>
+          <h2>API <span class="laranja">Carrinho</span></h2>
+          <p>Gerencie o carrinho de compras do seu e-commerce.</p>
+        </div>
+      </header>
+      <div class="modal__corpo">
+        <div class="modal__texto">
+          <p>O <strong class="hl">Cart & Order Management API </strong>é um projeto backend desenvolvido para simular as principais operações de um e-commerce, permitindo o <strong class="hl">cadastro de usuários, o gerenciamento de produtos e carrinhos de compras e a criação de pedidos.</strong> A aplicação implementa regras de negócio como cálculo automático do valor total, controle de estoque e acompanhamento do status dos pedidos.</p>
+          <p>O sistema foi estruturado com base nos princípios de <strong class="hl">Domain-Driven Design (DDD)</strong> e nas boas práticas de desenvolvimento de APIs REST. Sua modelagem foi planejada utilizando diagramas UML, definindo as entidades e seus relacionamentos para organizar a lógica da aplicação de forma clara e consistente.</p>
+          <a class="btn" href="https://github.com/geovane-nves/shopping-cart-api" target="_blank">Acessar repositório →</a>
+        </div>
+        <!-- coloque a imagem (diagrama UML) nesta pasta com este nome -->
+        <img class="modal__img" src="assets/images/projects/Cart.png" alt="Diagrama do projeto">
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- modal: projeto Sistema de Rifas ---------- -->
+  <div class="modal" id="modal-rifas">
+    <a class="modal__fundo" href="#projetos"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#projetos">×</a>
+      <header class="modal__topo">
+        <svg class="modal__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5V9a3 3 0 0 0 0 6v2.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5V15a3 3 0 0 0 0-6z"/><path d="M14 5v14" stroke-dasharray="2 2.4"/></svg>
+        <div>
+          <h2>Sistema <span class="laranja">de Rifas</span></h2>
+          <p>Compra e venda de rifas pela web.</p>
+        </div>
+      </header>
+      <div class="modal__corpo">
+        <div class="modal__texto">
+          <p>O <strong class="hl">Raffle-System</strong> é um sistema de gerenciamento de rifas desenvolvido em Java com Spring Boot. A ideia é oferecer o backend completo para que uma plataforma de rifas funcione: usuários se cadastram e fazem login com autenticação, e quem organiza pode criar rifas e controlar os bilhetes (números) de cada uma. O projeto está organizado como uma aplicação Maven padrão, com pom.xml, wrapper mvnw e um arquivo .env.example para configurar as variáveis de ambiente.</p>
+          <p>Do lado de quem participa, o sistema cobre o fluxo de compra: o usuário escolhe bilhetes, realiza a compra e paga, com uma carteira (wallet) para gerenciar saldo. O sorteio é automatizado, ou seja, o sistema define o vencedor sem intervenção manual. <strong class="hl">O repositório ainda está em desenvolvimento</strong></p>
+          <a class="btn" href="https://github.com/geovane-nves" target="_blank">Acessar repositório →</a>
+        </div>
+        <img class="modal__img" src="assets/images/projects/Raffle.png" alt="Imagem do projeto">
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- modal: projeto Sistema de Bibliotecas ---------- -->
+  <div class="modal" id="modal-biblioteca">
+    <a class="modal__fundo" href="#projetos"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#projetos">×</a>
+      <header class="modal__topo">
+        <svg class="modal__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M9 7.5h7"/></svg>
+        <div>
+          <h2>Sistema <span class="laranja">de Bibliotecas</span></h2>
+          <p>Gerenciamento de acervo, empréstimos e usuários.</p>
+        </div>
+      </header>
+      <div class="modal__corpo">
+        <div class="modal__texto">
+          <p>O <strong class="hl">Library flow API</strong> é uma API REST para gerenciar uma livraria digital, desenvolvida em Java 17+ com Spring Boot e PostgreSQL. Ela simula o ciclo completo de uma biblioteca: cadastro de livros e de várias cópias de cada título, aluguel e cálculo automático de multa por atraso, e um sistema de reservas para quando não há exemplares disponíveis. O projeto nasceu como um estudo avançado, com foco em boas práticas de arquitetura, segurança e persistência de dados.</p>
+          <p>Na parte técnica, a aplicação segue uma arquitetura em camadas (Controller, Service, Repository e DTOs), com JPA/Hibernate para acesso ao banco, validações com Bean Validation e tratamento centralizado de exceções. A segurança usa Spring Security com autenticação JWT, senhas criptografadas com BCrypt e autorização por papéis (ADMIN e USER).</p>
+          <a class="btn" href="https://github.com/geovane-nves" target="_blank">Acessar repositório →</a>
+        </div>
+        <img class="modal__img" src="assets/images/projects/Library.png" alt="Imagem do projeto">
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- modais do blog (post-1 ... post-8) ---------- -->
+  <div class="modal" id="post-1">
+    <a class="modal__fundo" href="#blog"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#blog">×</a>
+      <header class="modal__topo">
+        <div>
+          <h2 class="modal__titulo-post">Criando um portfólio com identidade visual</h2>
+          <p>Desenvolvimento</p>
+        </div>
+      </header>
+      <div class="modal__corpo modal__corpo--post">
+        <div class="modal__texto">
+          <p>O processo começa antes do código. Escolher cores, tipografia, formas e elementos gráficos exige pensar na sensação que a página deve transmitir. Cada decisão visual contribui para a maneira como as pessoas percebem o trabalho apresentado.</p>
+          <p>No desenvolvimento do meu portfólio, busco unir uma estética marcante a uma navegação funcional. Elementos interativos, animações e componentes personalizados ajudam a tornar a experiência mais interessante, desde que não atrapalhem a apresentação do conteúdo.</p>
+          <p>O resultado que procuro não é apenas uma página bonita, mas uma experiência que represente minha forma de pensar e desenvolver soluções para a web.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post-2">
+    <a class="modal__fundo" href="#blog"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#blog">×</a>
+      <header class="modal__topo">
+        <div>
+          <h2 class="modal__titulo-post">Participei do desenvolvimento web do Educa Drones</h2>
+          <p>Desenvolvimento</p>
+        </div>
+      </header>
+      <div class="modal__corpo modal__corpo--post">
+        <div class="modal__texto">
+          <p>Um projeto real apresenta desafios diferentes daqueles encontrados em exemplos simples. É necessário considerar a organização dos arquivos, a consistência visual das páginas, a manutenção do código e a maneira como o conteúdo será atualizado ao longo do tempo.</p>
+          <p>No desenvolvimento do site, o uso do Django permite trabalhar com templates, views e recursos administrativos. Isso abre possibilidades para que informações, como notícias e conquistas, sejam gerenciadas de forma dinâmica, sem depender de alterações manuais no HTML a cada atualização.</p>
+          <p>Outro aprendizado importante é compreender que o desenvolvimento não termina quando uma página funciona. Testar, revisar e ajustar a interface também fazem parte da construção de uma aplicação confiável.</p>
+          <p>Essa experiência reforça a importância de desenvolver pensando não apenas em quem acessa o site, mas também em quem precisará mantê-lo e ampliá-lo no futuro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post-3">
+    <a class="modal__fundo" href="#blog"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#blog">×</a>
+      <header class="modal__topo">
+        <div>
+          <h2 class="modal__titulo-post">Atrás de uma aplicação web</h2>
+          <p>Web</p>
+        </div>
+      </header>
+      <div class="modal__corpo modal__corpo--post">
+        <div class="modal__texto">
+          <p>Uma aplicação web pode parecer simples para quem a utiliza. Um formulário, uma tela de login ou uma lista de informações são elementos comuns, mas existe uma estrutura responsável por fazer tudo funcionar.</p>
+          <p>O front-end é a parte com a qual o usuário interage. É nele que encontramos os componentes visuais, os formulários, os botões e os elementos que tornam a navegação possível.</p>
+          <p>O back-end trabalha com as regras da aplicação. Ele recebe solicitações, valida informações, executa operações e determina como os dados devem ser processados. Em projetos com Java e Spring Boot, essa estrutura pode ser organizada em controladores, serviços e repositórios.</p>
+          <p>Já o banco de dados permite armazenar e consultar informações de maneira persistente. É nele que ficam os registros que precisam continuar disponíveis mesmo depois que o usuário fecha a página.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post-4">
+    <a class="modal__fundo" href="#blog"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#blog">×</a>
+      <header class="modal__topo">
+        <div>
+          <h2 class="modal__titulo-post">Participação de projeto de extensão IF baiano</h2>
+          <p>Extensão</p>
+        </div>
+      </header>
+      <div class="modal__corpo modal__corpo--post">
+        <div class="modal__texto">
+          <p>A tecnologia está cada vez mais presente no cotidiano, mas nem todos os estudantes têm as mesmas oportunidades de conhecer de perto o universo da programação e do desenvolvimento de software. Foi nesse contexto que participei do projeto de extensão Programando o Futuro, que tem como objetivo levar a tecnologia ao ensino médio.</p>
+          <p>Participar dessa experiência também representa uma oportunidade de colocar conhecimentos em prática fora do ambiente tradicional da sala de aula. A extensão universitária aproxima a instituição de ensino da comunidade e permite compartilhar conhecimentos, trocar experiências e aprender com diferentes realidades.</p>
+          <p>O Programando o Futuro reforçou minha percepção de que a tecnologia não se resume ao desenvolvimento de sistemas. Ela também pode ser uma ferramenta de educação, inclusão e transformação, especialmente quando seu acesso começa ainda no ensino médio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post-5">
+    <a class="modal__fundo" href="#blog"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#blog">×</a>
+      <header class="modal__topo">
+        <div>
+          <h2 class="modal__titulo-post">Programação na faculdade?</h2>
+          <p>Faculdade</p>
+        </div>
+      </header>
+      <div class="modal__corpo modal__corpo--post">
+        <div class="modal__texto">
+          <p>A faculdade de Análise e Desenvolvimento de Sistemas proporciona contato com diferentes áreas da computação, desde lógica de programação até bancos de dados, estruturas de dados e engenharia de software.</p>
+          <p>Durante os estudos, muitos conceitos podem parecer abstratos. Às vezes, uma atividade exige compreender uma estrutura ou resolver um problema específico sem deixar claro onde aquele conhecimento será utilizado na prática.</p>
+          <p>Quando esses conceitos aparecem em um projeto, a perspectiva muda. Estruturas de dados ajudam a organizar informações, a modelagem de banco de dados influencia a estrutura da aplicação e a lógica de programação se torna parte das decisões que fazem o sistema funcionar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post-6">
+    <a class="modal__fundo" href="#blog"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#blog">×</a>
+      <header class="modal__topo">
+        <div>
+          <h2 class="modal__titulo-post">Por que planejar antes de programar?</h2>
+          <p>Desenvolvimento</p>
+        </div>
+      </header>
+      <div class="modal__corpo modal__corpo--post">
+        <div class="modal__texto">
+          <p>Quando surge uma ideia para um site, a primeira vontade costuma ser abrir o editor e começar a escrever HTML e CSS. Entretanto, dedicar algum tempo ao planejamento pode evitar retrabalho e tornar o desenvolvimento mais organizado.</p>
+          <p>O primeiro passo é entender o objetivo da página e o conteúdo que precisa ser apresentado. Depois, referências visuais e rascunhos ajudam a definir a distribuição dos elementos, a hierarquia das informações e o caminho que o usuário seguirá durante a navegação.</p>
+          <p>A organização em componentes também faz diferença. Separar elementos reutilizáveis permite manter uma estrutura mais clara e facilita alterações futuras. Em vez de concentrar toda a interface em um único arquivo, cada parte pode ter uma responsabilidade bem definida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post-7">
+    <a class="modal__fundo" href="#blog"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#blog">×</a>
+      <header class="modal__topo">
+        <div>
+          <h2 class="modal__titulo-post">APIs REST: conectando diferentes partes de uma aplicação</h2>
+          <p>APIs</p>
+        </div>
+      </header>
+      <div class="modal__corpo modal__corpo--post">
+        <div class="modal__texto">
+          <p>Em muitas aplicações modernas, a interface e o servidor são desenvolvidos separadamente. Para que essas partes trabalhem juntas, é necessário estabelecer uma forma de comunicação. É nesse contexto que as APIs REST se tornam importantes.</p>
+          <p>Uma API disponibiliza operações que outros sistemas podem utilizar. Em uma aplicação de gerenciamento, por exemplo, podem existir endpoints para cadastrar usuários, consultar registros, atualizar informações e excluir dados.</p>
+          <p>O HTTP oferece métodos que ajudam a representar essas operações. O GET é utilizado para consultar recursos, o POST para criar ou processar informações, o PUT e o PATCH para atualizações e o DELETE para remoções.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post-8">
+    <a class="modal__fundo" href="#blog"></a>
+    <div class="modal__card">
+      <a class="modal__fechar" href="#blog">×</a>
+      <header class="modal__topo">
+        <div>
+          <h2 class="modal__titulo-post">O processo também faz parte do resultado</h2>
+          <p>Desenvolvimento</p>
+        </div>
+      </header>
+      <div class="modal__corpo modal__corpo--post">
+        <div class="modal__texto">
+          <p>Quando observamos um projeto finalizado, é fácil enxergar apenas o resultado: uma interface pronta, funcionalidades funcionando e uma estrutura aparentemente organizada. O caminho até esse ponto costuma ser bem menos linear.</p>
+          <p>Durante o desenvolvimento, surgem erros inesperados, comportamentos que não correspondem ao planejado e decisões que precisam ser revistas. Algumas soluções funcionam na primeira tentativa; outras exigem pesquisa, testes e várias modificações.</p>
+          <p>Aprendi a enxergar esses momentos como parte natural do processo. Um erro pode revelar uma falha de lógica, uma estrutura mal planejada ou simplesmente algo que ainda não compreendi completamente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/animations.js"></script>
+</body>
+</html>

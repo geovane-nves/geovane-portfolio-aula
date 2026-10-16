@@ -1,0 +1,151 @@
+/* ---------- FONTES ---------- */
+
+/* Poppins (arquivos em assets/fonts; o peso 600 vem do Google Fonts no index.html) */
+@font-face { font-family: 'Poppins'; font-weight: 300; src: url('../assets/fonts/Poppins-Light.ttf'); }
+@font-face { font-family: 'Poppins'; font-weight: 400; src: url('../assets/fonts/Poppins-Regular.ttf'); }
+@font-face { font-family: 'Poppins'; font-weight: 500; src: url('../assets/fonts/Poppins-Medium.ttf'); }
+@font-face { font-family: 'Poppins'; font-weight: 700; src: url('../assets/fonts/Poppins-Bold.ttf'); }
+@font-face { font-family: 'Poppins'; font-weight: 700; font-style: italic; src: url('../assets/fonts/Poppins-BoldItalic.ttf'); }
+
+
+
+/* ---------- VARIÁVEIS ----------
+   Tema CLARO é o padrão (:root). O tema ESCURO sobrescreve as variáveis quando o
+   js/theme.js coloca data-tema="escuro" no <html>*/
+:root {
+  color-scheme: light;
+
+  /* cores que mudam com o tema */
+  --fundo: #faf9f5;                 /* fundo da página e do formulário */
+  --texto: #191b1d;                 /* texto principal */
+  --linha: #191b1d;                 /* menu, separadores das habilidades, linha do blog */
+  --janela: #ffffff;                /* janela do formulário de contato */
+  --campo: #e6e5e2;                 /* campos do formulário */
+  --placeholder: rgba(25, 27, 29, .7);
+  --mao: #cecdcc;                   /* mão ASCII da capa */
+  --rodape: #c9c9c6;
+  --btn-texto: #f1f2f3;             /* texto do botão laranja */
+  --erro: #c62d12;
+  --filtro-icone: invert(.9);       /* ícones são brancos: no tema claro viram quase pretos */
+  --img-cartao-p: url('../assets/images/projects/CartaoP_claro.svg');
+  --img-cartao-b: url('../assets/images/projects/CartaoB_claro.svg');
+
+  /* cores iguais nos dois temas */
+  --laranja: #e2411f;
+  --branco: #ffffff;
+  --texto-escuro: #1a1a1a;          /* texto dentro dos cartões e dos modais */
+
+  --fonte-texto: 'Poppins', sans-serif;
+  --fonte-titulo: 'Umbara', 'Quattrocento', Georgia, serif;
+  --fonte-capa: 'FonteCapa', 'Playfair Display', Georgia, serif;
+}
+
+/* tema ESCURO (as cores do layout original) */
+:root[data-tema="escuro"] {
+  color-scheme: dark;
+
+  --fundo: #333336;
+  --texto: #ffffff;
+  --linha: #ffffff;
+  --janela: #1f1f1f;
+  --campo: #1f1f1f;
+  --placeholder: rgba(255, 255, 255, .85);
+  --mao: #464647;
+  --rodape: #282828;
+  --btn-texto: #ffffff;
+  --erro: #ff7a5f;
+  --filtro-icone: none;
+  --img-cartao-p: url('../assets/images/projects/CartaoP.svg');
+  --img-cartao-b: url('../assets/images/projects/CartaoB.svg');
+}
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+
+body {
+  min-width: 1440px;                 
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: 18px;
+  line-height: 28px;
+  
+}
+
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { display: block; }
+button, input, textarea { font: inherit; color: inherit; }
+
+
+/* ---------- TEXTOS COMUNS ---------- */
+
+/* título de seção (Habilidades, Experiências, Projetos...) */
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 54px;
+}
+
+.laranja { color: var(--laranja); }
+
+/* palavra em destaque: negrito, itálico e sublinhado pontilhado laranja */
+.hl {
+  font-style: italic;
+  text-decoration: underline dotted var(--laranja);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7px;
+}
+
+/* palavra em itálico serifado com sublinhado laranja (capa e contato) */
+.destaque-capa {
+  font-family: var(--fonte-capa);
+  font-weight: 400;
+  text-decoration: underline var(--laranja);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 11px;
+}
+
+
+/* ---------- LAYOUT DAS SEÇÕES ---------- */
+main > section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 609px 508px;
+  column-gap: 94px;
+  padding-left: 122px;
+  margin-top: -3px;
+}
+.sobre__text   { padding-top: 64px; }
+.sobre__text p { text-align: justify; margin-bottom: 28px; }
+.sobre__foto   { width: 508px; }
+
+/* foto do "Sobre mim": uma versão para cada tema */
+.sobre__foto--escuro { display: none; }
+:root[data-tema="escuro"] .sobre__foto--claro  { display: none; }
+:root[data-tema="escuro"] .sobre__foto--escuro { display: block; }
+
+.titulo--sobre { text-align: center; font-size: 52px; margin-bottom: 53px; }
+
+/* espaços de cada seção (topo / esquerda) */
+.habilidades  { padding: 113px 0 0 110px; }
+.experiencias { padding: 113px 0 0 110px; }
+.projetos     { padding: 174px 0 0 126px; }
+.blog         { padding: 159px 0 0 126px; }
+.contato {
+  display: grid;
+  grid-template-columns: 540px 662px;
+  column-gap: 38px;
+  padding: 147px 0 122px 98px;
+}
+
+.habilidades .titulo  { margin-bottom: 49px; }
+.experiencias .titulo { margin-bottom: 33px; }
+.projetos .titulo     { margin-bottom: 31px; }

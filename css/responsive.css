@@ -1,0 +1,294 @@
+/* Mão ASCII da capa.
+   position: relative na capa faz a mão se posicionar em relação à capa (sem isso ela
+   se posiciona em relação à janela do navegador e muda de lugar conforme a altura da
+   tela) e deixa o overflow: hidden da capa cortar o que passar das bordas.
+   O overflow: hidden na própria mão evita rolagem lateral caso a fonte não carregue. */
+.hero { position: relative; }
+.hero__mao { overflow: hidden; }
+
+
+/* ==========================================================================
+   1. NOTEBOOK — até 1439px
+*/
+@media (max-width: 1439px) {
+
+  body { min-width: 0; }                       /* tira a largura mínima de 1440px */
+
+  .navbar__inner { width: 100%; }
+
+  .habilidades,
+  .experiencias { padding-left: clamp(40px, 7.6vw, 110px); padding-right: 24px; }
+  .projetos,
+  .blog         { padding-left: clamp(40px, 8.75vw, 126px); padding-right: clamp(40px, 8.75vw, 126px); }
+
+  .sobre {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    column-gap: 6.5vw;
+    padding: 0 clamp(40px, 8.5vw, 122px);
+  }
+  .sobre__foto { width: 100%; }
+
+  .skills {
+    --pad: 16px;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    margin-left: calc(var(--pad) * -1);
+    overflow: hidden;
+  }
+  .skills li {
+    padding: 0 var(--pad);
+    margin-left: -2px;
+    border-left: 2px solid var(--linha);
+    background: none;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .skills li:first-child { padding-left: var(--pad); }
+  .skills img { max-height: 30px; }
+
+  /* Persona: encostada na direita, tamanho acompanha a tela */
+  .experiencias__persona { left: auto; right: 24px; width: clamp(260px, 24vw, 348px); }
+
+  /* Projetos: 3 colunas flexíveis (o cartão mantém a proporção 380x195) */
+  .projetos__lista { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .card-p { width: auto; height: auto; aspect-ratio: 380 / 195; }
+  .card-p img { height: auto; aspect-ratio: 380 / 103; }
+
+  /* Blog: 4 colunas flexíveis; o texto do cartão usa margem em % em vez de largura fixa */
+  .blog__topo { width: 100%; }
+  .blog__lista { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card-b p { width: auto; margin-right: 21%; }
+  .card-b--laranja p { width: auto; margin-right: 15%; }
+
+  /* Contato */
+  .contato {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    column-gap: 4vw;
+    padding-left: clamp(40px, 6.8vw, 98px);
+    padding-right: clamp(40px, 6.8vw, 98px);
+  }
+  .contato__texto { width: auto; max-width: 493px; }
+  .janela { width: 100%; }
+}
+
+@media (max-width: 1239px) {
+  .experiencias__persona { display: none; }
+}
+
+
+/* ==========================================================================
+   3. TABLET DEITADO — até 1100px
+*/
+@media (max-width: 1100px) {
+  .blog__lista { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+
+/* ==========================================================================
+   4. TABLET EM PÉ — até 900px
+*/
+@media (max-width: 900px) {
+
+  html { scroll-padding-top: 70px; }
+  body { font-size: 17px; line-height: 27px; }
+
+  .titulo { font-size: 40px; line-height: 50px; }
+
+  /* menu */
+  .navbar__inner {
+    width: calc(100% - 48px);
+    height: 70px;
+    padding-top: 28px;
+    font-size: 15px;
+  }
+  .navbar__links { gap: 22px; }
+
+  /* capa */
+  .hero { height: 560px; padding-bottom: 0; }
+  .hero__title { margin-left: 6vw; font-size: clamp(36px, 7.8vw, 64px); line-height: 1.22; }
+
+  .sobre {
+    display: flex;
+    flex-direction: column;
+    padding: 70px max(48px, calc((100% - 680px) / 2)) 0;
+    margin-top: 0;
+  }
+  .sobre__text { display: contents; }
+  .titulo--sobre { order: 1; margin-bottom: 28px; font-size: clamp(36px, 9vw, 52px); }
+  .sobre__foto   { order: 2; align-self: center; width: min(70%, 420px); margin-bottom: 32px; }
+  .sobre__text p { order: 3; }
+
+  /* habilidades e experiências */
+  .habilidades,
+  .experiencias { padding: 90px 48px 0; }
+  .habilidades .titulo,
+  .projetos .titulo  { margin-bottom: 28px; }
+  .experiencias .titulo { margin-bottom: 24px; }
+
+  .experiencia { width: auto; max-width: 680px; }
+  .experiencia + .experiencia { margin-top: 34px; }
+  .experiencia h3 { font-size: 17px; }
+
+  /* projetos e blog: 2 colunas */
+  .projetos,
+  .blog { padding: 100px 48px 0; }
+  .projetos__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+  .blog__topo { gap: 24px; }
+  .blog__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 20px; }
+
+  /* contato */
+  .contato { grid-template-columns: 1fr; row-gap: 56px; padding: 100px 48px 40px; }
+  .contato__info { margin-top: 0; }
+  .contato__titulo { margin-top: 0; font-size: clamp(30px, 6.4vw, 44px); line-height: 1.4; }
+  .contato__texto { max-width: none; margin: 24px 0 0; }
+  .redes { margin-top: 28px; }
+
+  .janela { border-radius: 44px 44px 28px 28px; }
+  .janela__barra { height: 64px; }
+  .form { height: auto; padding: 32px; }
+  .form h3 { margin-bottom: 14px; }
+  .form textarea { height: 150px; }
+  .form button { margin-top: 28px; }
+
+  /* rodapé */
+  .footer { height: 70px; padding: 0 48px; font-size: 16px; }
+}
+
+
+/* ==========================================================================
+   5. CELULAR — até 640px  
+*/
+@media (max-width: 640px) {
+
+  body { font-size: clamp(14px, 3.1vw, 16px); line-height: 1.5; }
+  .titulo { font-size: clamp(32px, 8vw, 42px); line-height: 1.25; }
+
+  /* menu: só Home, Projetos, Blog e Contato (esconde Sobre Mim e Habilidades) */
+  .navbar__inner {
+    width: calc(100% - 46px);
+    height: 56px;
+    padding: 22px 5px 0 9px;
+    font-size: 14px;
+  }
+  .navbar__links { gap: clamp(12px, 5vw, 31px); }
+  .navbar__links li:has(a[href="#sobre"]),
+  .navbar__links li:has(a[href="#habilidades"]) { display: none; }
+  .navbar__inner > a { font-size: 11px; line-height: 20px; }
+
+  /* capa: a mão fica maior que a tela (160% da largura), centralizada e cortada
+     dos dois lados, como no PDF. O tamanho da letra acompanha a largura da tela. */
+  .hero { height: 81vw; min-height: 320px; padding-top: 9vw; }
+  .hero__mao {
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%, -50%);
+    font-size: 1.9vw;
+    line-height: 1.9vw;
+  }
+  .hero__title { margin-left: 9vw; font-size: clamp(28px, 7.8vw, 44px); }
+
+  /* Sobre mim */
+  .sobre { padding: 64px clamp(20px, 5.5vw, 28px) 0; }
+  .titulo--sobre { font-size: clamp(36px, 9vw, 46px); margin-bottom: 20px; }
+  .sobre__foto { width: min(69vw, 380px); margin-bottom: 28px; }
+  .sobre__text p { margin-bottom: 20px; line-height: 24px; hyphens: auto; }
+
+  /* habilidades */
+  .habilidades,
+  .experiencias { padding: 80px clamp(20px, 7vw, 36px) 0; }
+  .habilidades .titulo { margin-bottom: 32px; }
+  .experiencias .titulo { margin-bottom: 28px; }
+
+  .skills { --pad: clamp(8px, 2.6vw, 14px); row-gap: 10px; }
+  .skills + .skills { margin-top: 22px; }
+  .skills li { gap: 8px; font-size: clamp(13.5px, 3.6vw, 19px); line-height: 28px; }
+  .skills img { max-height: clamp(20px, 5vw, 26px); }
+
+  /* experiências */
+  .experiencia h3 { font-size: clamp(14px, 3.2vw, 16px); }
+  .experiencia p { line-height: 24px; hyphens: auto; }
+
+  /* projetos e blog: 1 coluna, cartão de no máximo 380px centralizado */
+  .projetos,
+  .blog { padding: 90px max(24px, calc((100% - 380px) / 2)) 0; }
+  .projetos .titulo { margin-bottom: 30px; }
+  .projetos__lista { grid-template-columns: 1fr; gap: 36px; }
+  .card-p h3 { font-size: 15px; }
+
+  .blog__topo { gap: 24px; }
+  .blog__lista { grid-template-columns: 1fr; gap: 26px; margin-top: 30px; }
+  .card-b p { margin-right: 28%; }
+  .card-b--laranja p { margin-right: 20%; }
+
+  /* contato */
+  .contato { padding: 90px 0 36px; row-gap: 56px; }
+  .contato__info { padding: 0 clamp(24px, 10vw, 52px); }
+  .contato__titulo { font-size: clamp(26px, 6.4vw, 36px); }
+  .contato__texto { margin-top: 22px; text-align: justify; font-size: clamp(15px, 3.4vw, 17px); line-height: 1.6; }
+  .redes { margin-top: 32px; }
+  .redes li { margin-bottom: 10px; }
+  .redes a { gap: 12px; font-size: clamp(15px, 3.4vw, 17.5px); }
+  .redes img { width: 28px; height: 28px; }
+
+  .janela { width: calc(100% - 24px); margin: 0 auto; padding: 0 5px 5px 6px; }
+  .janela__barra { height: 62px; padding-left: 20px; }
+  .bolinha { width: 21px; height: 21px; }
+  .form { padding: 12px clamp(20px, 7.8vw, 40px) 36px; }
+  .form h3 { font-size: 20px; }
+  .form input { height: 42px; }
+  .form textarea { height: 130px; }
+  .form button { margin-top: 26px; }
+
+  /* rodapé */
+  .footer { height: 50px; padding: 0 clamp(20px, 7vw, 36px); font-size: clamp(12px, 2.8vw, 14px); }
+  .footer a { display: none; }
+}
+
+
+@media (max-width: 420px) {
+  .form__linha { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 1180px), (max-height: 740px) {
+
+  .modal__card {
+    display: flex;
+    flex-direction: column;
+    width: min(94vw, 780px);
+    aspect-ratio: auto;
+    max-height: 90vh;
+    overflow: hidden;
+    border-radius: 32px;
+    background: var(--branco);                 
+  }
+
+  .modal__fechar { top: 16px; right: 16px; }
+
+  .modal__topo {
+    flex: none;
+    height: auto;
+    min-height: 92px;
+    gap: 18px;
+    padding: 20px 68px 20px 24px;
+    border-radius: 0;
+  }
+  .modal__icone { flex: none; width: 40px; height: 40px; }
+  .modal__icone + div { padding-left: 18px; }
+  .modal__topo h2 { font-size: clamp(22px, 5.4vw, 32px); line-height: 1.2; }
+  .modal__topo p { font-size: 14px; line-height: 20px; }
+  .modal__titulo-post { font-size: clamp(20px, 5vw, 26px) !important; line-height: 1.25 !important; }
+
+  .modal__corpo {
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 24px;
+    min-height: 0;
+    height: auto;
+    padding: 24px 28px 32px;
+    overflow-y: auto;
+  }
+  .modal__texto,
+  .modal__corpo--post .modal__texto { width: 100%; font-size: 15px; line-height: 24px; }
+  .modal__texto .btn { margin-top: 8px; }
+  .modal__img { width: 100%; height: auto; margin-top: 0; }
+}
