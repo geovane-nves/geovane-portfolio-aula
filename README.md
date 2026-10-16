@@ -20,10 +20,10 @@
 ---
 
 <div align="center">
-
-<img src="assets/images/screenshots/Desktop_Tema_claro.png" alt="Capa do portfólio nos temas claro (esquerda) e escuro (direita)" width="500" />
-<img src="assets/images/screenshots/Desktop_Tema_escuro.png" alt="Capa do portfólio nos temas claro (esquerda) e escuro (direita)" width="500" />
-
+<div display="flex">
+<img src="assets/images/screenshots/Desktop_Tema_claro.png" alt="Capa do portfólio nos temas claro (esquerda) e escuro (direita)" width="400" />
+<img src="assets/images/screenshots/Desktop_Tema_escuro.png" alt="Capa do portfólio nos temas claro (esquerda) e escuro (direita)" width="400" />
+</div>
 <sub>Capa do portfólio: tema claro à esquerda, tema escuro à direita. O tema é escolhido automaticamente pelo navegador de quem acessa.</sub>
 
 </div>
